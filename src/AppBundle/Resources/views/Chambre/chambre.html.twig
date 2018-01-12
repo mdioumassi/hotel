@@ -1,0 +1,24 @@
+{{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+{{ form_errors(form) }}
+<div>
+    {{ form_label(form.numChambre, 'N° Chambre:' ) }}
+    {{ form_widget(form.numChambre) }}
+</div>
+<div>
+    {{ form_label(form.dateArrivee, 'Date d\'arrivée:' ) }}
+    {{ form_widget(form.dateArrivee) }}
+</div>
+<div>
+    {{ form_label(form.dateDepart, 'Date depart:' ) }}
+    {{ form_widget(form.dateDepart) }}
+</div>
+<div>
+    {{ form_label(form.petitDej, 'Petit déjeuner:' ) }}
+    {{ form_widget(form.petitDej) }}
+</div>
+<div>
+    {{ form_label(form.nombrePersonne, 'Nombre de personne:' ) }}
+    {{ form_widget(form.nombrePersonne) }}
+</div>
+<button type="submit" class="w3-btn w3-block w3-blue">Valider</button>
+{{ form_end(form) }}
