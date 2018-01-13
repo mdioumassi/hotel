@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table(name="chambre")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ReservationRepository")
- * @UniqueEntity(fields={"numChambre"}, message="Ce chambre existe dejà")
+ * @UniqueEntity(fields={"numChambre"}, message="Cette chambre existe dejà")
  */
 class Chambre
 {
@@ -27,27 +27,24 @@ class Chambre
     /**
      * @var int
      * @Assert\NotBlank()
-     * @ORM\Column(name="num_chambre", type="integer", unique=true)
+     * @ORM\Column(name="num_chambre", type="integer")
      */
     private $numChambre;
 
     /**
      * @var \DateTime
-     * @Assert\NotBlank()
      * @ORM\Column(name="date_arrivee", type="datetimetz")
      */
     private $dateArrivee;
 
     /**
      * @var \DateTime
-     * @Assert\NotBlank()
      * @ORM\Column(name="date_depart", type="datetimetz")
      */
     private $dateDepart;
 
     /**
      * @var bool
-     * @Assert\NotBlank()
      * @ORM\Column(name="petit_dej", type="boolean")
      */
     private $petitDej;

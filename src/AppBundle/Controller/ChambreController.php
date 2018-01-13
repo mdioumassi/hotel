@@ -16,12 +16,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use FOS\RestBundle\View\View;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ChambreController extends Controller
 {
     /**
-     * @Rest\View(StatusCode = Response::HTTP_OK)
+     * @Rest\View(statusCode = Response::HTTP_OK)
      * @Rest\Get("/reservations")
      */
     public function getReservation(Request $request)

@@ -3,6 +3,7 @@
 <div>
     {{ form_label(form.numChambre, 'N° Chambre:' ) }}
     {{ form_widget(form.numChambre) }}
+    {{ form_errors(form.numChambre) }}
 </div>
 <div>
     {{ form_label(form.dateArrivee, 'Date d\'arrivée:' ) }}
@@ -15,10 +16,12 @@
 <div>
     {{ form_label(form.petitDej, 'Petit déjeuner:' ) }}
     {{ form_widget(form.petitDej) }}
+    {{ form_errors(form.petitDej) }}
 </div>
 <div>
     {{ form_label(form.nombrePersonne, 'Nombre de personne:' ) }}
     {{ form_widget(form.nombrePersonne) }}
+    {{ form_errors(form.nombrePersonne) }}
 </div>
 <button type="submit" class="w3-btn w3-block w3-blue">Valider</button>
 {{ form_end(form) }}
